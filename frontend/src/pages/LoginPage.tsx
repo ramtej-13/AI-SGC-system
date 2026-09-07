@@ -43,7 +43,11 @@ export const LoginPage: React.FC = () => {
         navigate("/");
       }
     } catch (err: any) {
-      setError(err.response?.data?.detail || "Invalid email or password. Please try again.");
+      if (!err.response) {
+        setError("Cannot connect to backend server. Please ensure backend is running or check your connection.");
+      } else {
+        setError(err.response?.data?.detail || "Invalid email or password. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
