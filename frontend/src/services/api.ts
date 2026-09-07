@@ -8,8 +8,20 @@ import {
   Department
 } from "../types";
 
-const apiBase = import.meta.env.VITE_API_BASE_URL
-  ? `${import.meta.env.VITE_API_BASE_URL.replace(/\/$/, "")}/api`
+let rawBase = (import.meta.env.VITE_API_BASE_URL || "").trim();
+
+// Auto-correct typo from ai-sgc-backend to ai-sgc-system
+if (rawBase.includes("ai-sgc-backend.onrender.com")) {
+  rawBase = "https://ai-sgc-system.onrender.com";
+}
+
+// Fallback when hosted on Vercel if env variable is missing or wrong
+if (!rawBase && typeof window !== "undefined" && window.location.hostname.includes("vercel.app")) {
+  rawBase = "https://ai-sgc-system.onrender.com";
+}
+
+const apiBase = rawBase
+  ? `${rawBase.replace(/\/$/, "")}/api`
   : "/api";
 
 const api = axios.create({
