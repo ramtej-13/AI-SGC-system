@@ -1,0 +1,221 @@
+{
+  "training_timestamp": "2026-09-05T17:49:42.412421",
+  "total_samples": 1260,
+  "train_samples": 1008,
+  "test_samples": 252,
+  "vocabulary_size": 4048,
+  "categories": [
+    "Academic",
+    "Cleaning / Housekeeping",
+    "Electrical",
+    "Hostel / Canteen",
+    "IT / Network",
+    "Infrastructure / Maintenance",
+    "Laboratory",
+    "Other / Manual Review",
+    "Plumbing"
+  ],
+  "model_architecture": "TF-IDF (unigrams + bigrams) + Multinomial Logistic Regression",
+  "default_confidence_threshold": 0.7,
+  "comparison_benchmarks": {
+    "Logistic Regression": {
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0
+    },
+    "Multinomial Naive Bayes": {
+      "accuracy": 0.996,
+      "macro_precision": 0.9962,
+      "macro_recall": 0.996,
+      "macro_f1": 0.996,
+      "weighted_f1": 0.996
+    },
+    "Linear SVC": {
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0
+    }
+  },
+  "selected_model": "Logistic Regression",
+  "evaluation_metrics": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0
+  },
+  "per_class_metrics": {
+    "Academic": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Cleaning / Housekeeping": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Electrical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Hostel / Canteen": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "IT / Network": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Infrastructure / Maintenance": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Laboratory": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Other / Manual Review": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    },
+    "Plumbing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 28.0
+    }
+  },
+  "confusion_matrix": {
+    "matrix": [
+      [
+        28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        28
+      ]
+    ],
+    "labels": [
+      "Academic",
+      "Cleaning / Housekeeping",
+      "Electrical",
+      "Hostel / Canteen",
+      "IT / Network",
+      "Infrastructure / Maintenance",
+      "Laboratory",
+      "Other / Manual Review",
+      "Plumbing"
+    ]
+  }
+}

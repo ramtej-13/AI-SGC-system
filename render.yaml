@@ -1,0 +1,15 @@
+services:
+  # Backend FastAPI Service
+  - type: web
+    name: ai-sgc-backend
+    env: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python -m app.ml.train && python scripts/seed_demo_data.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHONPATH
+        value: .
+      - key: PYTHON_VERSION
+        value: 3.11.9

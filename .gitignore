@@ -1,0 +1,24 @@
+# Python virtual environments & bytecode
+venv/
+backend/venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+*.db
+*.sqlite
+.pytest_cache/
+.cloudflared/
+
+# Node modules & build output
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
