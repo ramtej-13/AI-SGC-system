@@ -9,8 +9,6 @@ echo ======================================================================
 echo Target: https://github.com/ramtej-13/AI-SGC-system.git
 echo.
 
-set "PATH=C:\Users\koneAjay\AppData\Local\MinGit\cmd;%PATH%"
-
 echo [1/3] Verifying Git environment...
 git --version
 if %ERRORLEVEL% neq 0 (
